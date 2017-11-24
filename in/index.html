@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>SPT-TALK简介</title>
+    
+    <meta name="description" content="SPY-TALK介绍页" />
+    <meta name="author" content="PrismX.WIN" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+        video#bgvid { 
+
+  position: fixed; right: 0; bottom: 0;
+
+  min-width: 100%; min-height: 100%;
+
+  width: auto; height: auto; z-index: -100;
+
+  background: url(polina.jpg) no-repeat;
+
+  background-size:cover; 
+
+}
+    </style>
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>很遗憾，您的浏览器<b>不支持</b>impress.js组件,无法看到完整效果</p>
+    <p>为了更好的体验我们建议您在PC端使用<b>Chrome</b>, <b>Safari</b> 或 <b>Firefox</b>等支持HTML5特性的浏览器^.^</p>
+</div>
+<video autoplay loop poster="polina.jpg" id="bgvid">
+
+  <source src="http://prismx.cc/52b983fdd1618.webm">
+
+</video>
+<div id="impress">
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>您是否为互联网时代的 <b>“信息私密”</b> 感到困扰</q>
+    </div>
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>您是否曾用QQ等聊天工具告诉您的朋友<strong>密码</strong> 或 <strong>密匙</strong> 又或者是 <strong>私钥</strong>？</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>您是否曾用聊天工具和朋友进行私密谈话却发现有 <strong>聊天记录</strong>?</q>
+    </div>
+    
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <q>XSS、无线渗透、DNS劫持<strong>数据私密</strong> 何处 <strong>遁形</strong>？</q>
+    </div>
+    
+    <div class="step slide" data-x="4000" data-y="-1500" data-rotate-x="-180" data-rotate-y="-90">
+        <q>有没有一种安全、便捷的方式发送私密数据？</q>
+    </div>
+    
+    <div class="step slide" data-x="5000" data-y="-1500" data-rotate-x="-180" data-rotate-y="-90">
+        <q>SPT-TALK —— 您的私人私密信使</q>
+    </div>
+    
+    <div class="step slide" data-x="5000" data-y="-2500" data-rotate-x="-180" data-rotate-y="-90">
+        <q><strong>自销毁信息</strong> 、 <strong>无痕在线聊天</strong></q>
+    </div>
+    
+    <div class="step slide" data-x="5000" data-y="1500" data-rotate-x="-180" data-rotate-y="-90">
+        <q>多种形式为您的隐私护驾</q>
+    </div> 
+
+    <div class="step slide" data-x="0" data-y="-5000" data-scale="3">
+        <q>自毁信息：</q><P>在SPY-TALK上创建一则自毁信息，阅后即焚，无影无踪</P><P>您的信息将被我们采用行业规范的加密算法加密，加密过程本地执行</P>
+    </div> 
+    
+    <div class="step slide" data-x="0" data-y="-5000" data-z="-3000" data-scale="1">
+        <q>无痕在线：</q><P>在SPY-TALK上创建一次临时对话，我们将为您扫除蛛丝马迹</P><P>您的对话过程将由我们采用行业规范的加密算法加密，加密过程本地执行</P>
+    </div> 
+    
+    <div class="step slide" data-x="-3000" data-y="-1500">
+        <q>简洁、快速、安全</q><P>SPY-TALK</P><p>信息传递——新体验</p>
+    </div> 
+    
+    <div class="step slide" data-x="-4000" data-y="-1500" rotate="180">
+        <q><a href="../">快点击我体验一下吧！</a></q>
+    </div> 
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="5">
+    </div>
+</div>
+<div class="hint">
+    <p>请按下空格或使用左右方向键浏览^.^</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>请按下空格或使用左右方向键浏览^.^</p>";
+}
+</script>
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>

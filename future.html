@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>时间胶囊</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="lightning-zgc">
+    <meta name="description" content="SPY-TALK.NET">
+    <meta name="keywords" content="SPY-TALK 隐私保护 信息传递">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="https://spy-talk.net">
+
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        height: 100%;
+      }
+      body {
+        color: #fff;
+        font-size: 16px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        background-image: url("https://github.com/sirxemic/jquery.ripples/blob/master/demo/img/bg2.jpg?raw=true");
+        background-size: cover;
+        background-position: 50% 0;
+        height: 100%;
+        text-align: center;
+      }
+      body:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      main {
+        display: inline-block;
+        vertical-align: middle;
+        background: url("https://github.com/sirxemic/jquery.ripples/blob/master/demo/img/bg.jpg?raw=true");
+        padding: 100px;
+        max-width: 500px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 18px;
+        margin-top: 6px;
+      }
+      p {
+        text-align: left;
+        margin-top: 20px;
+      }
+      a {
+        color: #ff6800;
+      }
+      pre {
+        text-align: left;
+        margin-top: 20px;
+      }
+      .error {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #000;
+        color: #f00;
+        padding: 5px;
+        max-width: 50%;
+      }
+      button {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 0 0.8em;
+        line-height: 2em;
+        border: none;
+        background: #666;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 0.5em;
+        box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+      }
+      button:hover {
+        background: #888;
+      }
+      code {
+        font-size: 0.8em;
+        display: inline;
+      }
+      .disable {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+      .code-string {
+        color: #ec7600;
+      }
+      .code-cbracket {
+        font-weight: bold;
+      }
+      .code-number {
+        color: #ffcd22;
+      }
+    </style>
+  </head>
+  <body>
+
+    <main>
+      <header>
+        <h1>时间胶囊</h1>
+        <h2>牛顿第三定律告诉我们，总得留下点什么… ——《星际穿越》</h2>
+      </header>
+
+      <p><input type="text" class="am-form-field am-round" placeholder="说一点什么吧"/></p>
+      <p><input type="text" class="am-form-field am-round" placeholder="您的邮箱"/></p>
+      <button type="submit" class="am-btn am-btn-default" onclick="alert('提交成功')">提交</button>
+
+      <p>时间胶囊：SPY-TALK项目组的一个小彩蛋</p>
+      <p>总有一些事情想告诉未来的自己</p>
+
+      <div class="error"></div>
+    </main>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/ripples.js"></script>
+    <script>
+      $(document).ready(function () {
+        try {
+          $('body').ripples({
+            resolution: 512, dropRadius: 20, //px
+            perturbance: 0.04
+          });
+          $('main').ripples({
+            resolution: 128, dropRadius: 10, //px
+            perturbance: 0.04,
+            interactive: false
+          });
+        } catch (e) {
+          $('.error').show().text(e);
+        }
+        $('.js-ripples-disable').on('click', function () {
+          $('body, main').ripples('destroy');
+          $(this).hide();
+        });
+        $('.js-ripples-play').on('click', function () {
+          $('body, main').ripples('play');
+        });
+        $('.js-ripples-pause').on('click', function () {
+          $('body, main').ripples('pause');
+        });
+        // Automatic drops
+        setInterval(function () {
+          var $el = $('main');
+          var x = Math.random() * $el.outerWidth();
+          var y = Math.random() * $el.outerHeight();
+          var dropRadius = 20;
+          var strength = 0.04 + Math.random() * 0.04;
+          $el.ripples('drop', x, y, dropRadius, strength);
+        }, 400);
+      });
+    </script>
+  </body>
+</html>
