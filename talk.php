@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="author" content="lightning-zgc">
+  <meta name="author" content="GLTLAB">
   <meta name="description" content="SPY-TALK.NET">
   <meta name="keywords" content="SPY-TALK 隐私保护 信息传递">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -50,13 +50,13 @@ type1();
 }
 function type1(){
 $('.mainp1').typeIt({
-     whatToType: ["SPY-TALK在线聊天室", "隶属于Lightning云实验室闪点计划","风过无声   雁过无痕"],
+     whatToType: ["SPY-TALK在线聊天室", "风过无声   雁过无痕"],
      typeSpeed: 250,
      breakLines: false,
      lifeLike: true,
      showCursor: true,
      breakWait: 1500
-     
+
 });
 }
 </script>
@@ -109,7 +109,7 @@ $('.mainp1').typeIt({
     <li class="am-disabled"><a href="">独立论坛</a></li>
   </ul>
 </div>
-          
+
       </div>
   </header>
 <div id="animation">
@@ -151,13 +151,13 @@ $('.mainp1').typeIt({
            data-am-footer="{  }">
     <div class="am-footer-miscs ">
 
-          <p>由 <a href="http://lightning-zgc.com/" title="雷霆云实验室"
-                                                target="_blank" class="">雷霆云实验室</a>
+          <p>由 <a href="http://GLTLAB.com/" title="GLTLAB"
+                                                target="_blank" class="">GLTLAB</a>
             创建</p><br>
         <p>CopyRight©2015  SPY-TALK.NET</p>
     </div>
   </footer>
-  
+
   <script>
   var main = [];
   function addhtmlme(valto){
@@ -169,7 +169,7 @@ $("#talktable").append('  <li class="am-comment"><article class="am-comment"><di
   function fanyi(e) {
       if($(e).hasClass("am-comment-bd-fanyi")) {
       $.post(
-    "talkto.php", 
+    "talkto.php",
     { type: "fanyi", nr: $(e).html() },
     function(data){
         msg = JSON.parse(data).msg;
@@ -182,7 +182,7 @@ $("#talktable").append('  <li class="am-comment"><article class="am-comment"><di
   $(document).ready(function(){
       main['name'] = randomString(8);
       $.post(
-    "talkto.php", 
+    "talkto.php",
     { type: "connect" },
     function(data){
         $("#codeinfo").html("通讯标识符：" + data);
@@ -191,10 +191,10 @@ $("#talktable").append('  <li class="am-comment"><article class="am-comment"><di
     }
     );
   });
-  
+
   function con() {
       $.post(
-    "talkto.php", 
+    "talkto.php",
     { type: "con" , qd: main['qd']},
     function(data){
         if(data) {
@@ -206,10 +206,10 @@ $("#talktable").append('  <li class="am-comment"><article class="am-comment"><di
     }
     );
   }
-  
+
   function con_get() {
       $.post(
-    "talkto.php", 
+    "talkto.php",
     { type: "get" , cookie: main['cookie'] , sender: main['name']},
     function(data){
         var re = JSON.parse(data);
@@ -220,13 +220,13 @@ $("#talktable").append('  <li class="am-comment"><article class="am-comment"><di
     }
     );
   }
-  
+
   function a() {
       var nr = $("#sender").val();
       if(nr) {
       if(!main['cookie']) {
           $.post(
-    "talkto.php", 
+    "talkto.php",
     { type: "connect_to" , qd: nr},
     function(data){
         main['cookie'] = data;
@@ -238,9 +238,9 @@ $("#talktable").append('  <li class="am-comment"><article class="am-comment"><di
     }
     );
       }else {
-          
+
 $.post(
-    "talkto.php", 
+    "talkto.php",
     { type: "talk" , cookie: main['cookie'] , chat: nr , sender: main['name']},
     function(data){
         var re = JSON.parse(data);
@@ -253,11 +253,11 @@ $.post(
         }
     }
     );
-    
+
       }
       }
   }
-  
+
    function BindEnter(event) {
 
  if (event.keyCode == 13) {
@@ -270,7 +270,7 @@ $.post(
 
    }
 
-} 
+}
   function randomString(len) {
 　　len = len || 32;
 　　var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';

@@ -16,7 +16,7 @@ if($bsf)
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="lightning-zgc">
+    <meta name="author" content="GLTLAB">
     <meta name="description" content="SPY-TALK.NET">
     <meta name="keywords" content="SPY-TALK 隐私保护 信息传递">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -62,7 +62,7 @@ if($bsf)
       function type1() {
         $('.mainp1').typeIt({
           whatToType: [
-            "欢迎访问SPY-TALK", "隶属于Lightning云实验室闪点计划", "风过无声   雁过无痕"
+            "欢迎访问SPY-TALK","风过无声   雁过无痕"
           ],
           typeSpeed: 250,
           breakLines: false,
